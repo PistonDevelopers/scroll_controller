@@ -16,7 +16,7 @@ use scroll_controller::{ScrollController, ScrollSettings};
 fn main() {
     let opengl = OpenGL::V3_2;
     let settings = WindowSettings::new("scroll_test", [512; 2])
-        .opengl(opengl)
+        .graphics_api(opengl)
         .exit_on_esc(true);
     let mut window: Sdl2Window = settings.build().unwrap();
     let mut events = Events::new(EventSettings::new());
